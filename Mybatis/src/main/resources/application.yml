@@ -1,0 +1,21 @@
+#端口设置
+server:
+  port: 8888
+#日志设置
+logging:
+  path: logs
+  file: mylog.log
+#spring启动程序配置
+spring:
+  application:
+    name: report
+# 配置数据库链接
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mydata
+    username: root
+    password: root
+#配置mybatis的实体与SQL相关联—此处作用与mybatis-config.xml（可删除）相同。
+mybatis:
+  type-aliases-package: com.nvr.model
+  mapper-locations: classpath:mapper/*.xml
